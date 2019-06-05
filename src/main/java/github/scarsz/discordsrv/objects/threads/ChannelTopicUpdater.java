@@ -38,7 +38,7 @@ public class ChannelTopicUpdater extends Thread {
     @Override
     public void run() {
         int rate = DiscordSRV.config().getInt("ChannelTopicUpdaterRateInMinutes");
-        if (rate < 5) rate = 5;
+        if (rate < 3) rate = 3;
 
         while (true) {
             try {
